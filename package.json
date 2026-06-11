@@ -1,0 +1,19 @@
+{
+  "name": "wallet-saver-tools",
+  "version": "1.0.0",
+  "description": "Helper scripts for Wallet Saver. [VULN-10] CWE-1104/CWE-1035: pinned to dependencies with known CVEs for SCA scanner testing.",
+  "private": true,
+  "scripts": {
+    "export-report": "node tools/scripts/report.js"
+  },
+  "dependencies": {
+    "lodash": "4.17.4",
+    "minimist": "1.2.0",
+    "axios": "0.18.0",
+    "node-fetch": "2.6.0",
+    "handlebars": "4.0.11",
+    "jsonwebtoken": "8.3.0",
+    "ejs": "2.5.7",
+    "moment": "2.19.3"
+  }
+}

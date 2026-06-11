@@ -1,0 +1,28 @@
+# [VULN-12] CWE-250 Insecure Kubernetes manifest for IaC scanning.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wallet-saver
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: wallet-saver }
+  template:
+    metadata:
+      labels: { app: wallet-saver }
+    spec:
+      hostNetwork: true
+      hostPID: true
+      containers:
+        - name: app
+          image: wallet-saver:latest          # mutable latest tag
+          securityContext:
+            privileged: true                   # privileged
+            runAsUser: 0                        # runs as root
+            allowPrivilegeEscalation: true
+            readOnlyRootFilesystem: false
+          env:
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYFAKEDEMOKEY"   # secret in manifest
+          ports:
+            - containerPort: 8080

@@ -1,0 +1,9 @@
+# [VULN-10] CWE-1104 Vulnerable/outdated dependencies pinned for SCA testing.
+Flask==0.12.2
+Jinja2==2.10
+Werkzeug==0.11.15
+requests==2.19.1
+urllib3==1.24.1
+PyYAML==3.13
+cryptography==2.3
+Django==1.11.0
