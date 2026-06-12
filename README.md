@@ -6,6 +6,8 @@ This project was **vibe-coded** — built conversationally with an AI coding age
 - **Model:** Claude Opus 4.8 (`claude-opus-4-8`)
 - **How:** Architecture, Flutter/Dart implementation, and this documentation were generated through an iterative chat-driven workflow.
 
+> ⚠️ **This particular project contains some vibe-coding vulnerability for testing security scanners in proof-of-concept demos. **Do not deploy, distribute, or reuse anything here.**
+
 ---
 
 # Wallet Saver
